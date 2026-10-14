@@ -1,0 +1,10 @@
+# What not to upload for `gcloud run deploy --source`.
+.git
+.env
+.env.*
+.history
+*.md
+!README.md
+.cursor
+.idea
+.vscode
