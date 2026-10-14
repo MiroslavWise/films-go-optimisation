@@ -64,7 +64,7 @@ Blob paths (compatible with next-films):
 | `PORT` | Cloud Run sets | Listen address |
 | `AVIF_QUALITY` | no | default `38` |
 | `AVIF_SPEED` | no | default `6` (gen2brain Speed) |
-| `MAX_UPLOAD_BYTES` | no | default `4194304` |
+| `MAX_UPLOAD_BYTES` | no | default `2097152` (2 MiB) |
 | `JOB_JWT_ISSUER` / `JOB_JWT_AUDIENCE` | no | optional JWT checks |
 
 **Do not** set `POSTGRES_URL` here.

@@ -58,9 +58,10 @@ func (c *Client) Put(ctx context.Context, pathname string, data []byte, contentT
 		return PutResult{}, err
 	}
 	req.Header.Set("Authorization", "Bearer "+c.Token)
-	req.Header.Set("x-api-version", "7")
+	// Match @vercel/blob SDK (≥ private stores): version 12 + x-vercel-blob-access.
+	req.Header.Set("x-api-version", "12")
 	req.Header.Set("x-content-type", contentType)
-	req.Header.Set("x-access", "private")
+	req.Header.Set("x-vercel-blob-access", "private")
 	req.Header.Set("x-add-random-suffix", "0")
 	req.Header.Set("x-allow-overwrite", "1")
 	req.ContentLength = int64(len(data))

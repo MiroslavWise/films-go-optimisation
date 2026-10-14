@@ -8,7 +8,7 @@ import (
 )
 
 const (
-	DefaultMaxUploadBytes = 4 * 1024 * 1024
+	DefaultMaxUploadBytes = 2 * 1024 * 1024
 	DefaultAVIFQuality    = 38
 	DefaultAVIFSpeed      = 6
 	DefaultPort           = "8080"
